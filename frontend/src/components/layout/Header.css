@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Header.css
+   Styles for the main application header component
+   ========================================================================== */
+
+.app-header {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky; /* Example: make header sticky */
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+.main-nav {
+  /* Styles for navigation container */
+}
+
+.nav-links-desktop {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display links horizontally on desktop */
+  gap: var(--spacing-md);
+}
+
+.nav-links-desktop li {
+  /* Styles for list items */
+}
+
+.nav-links-desktop a {
+  color: var(--color-light);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-base);
+}
+
+.nav-links-desktop a:hover,
+.nav-links-desktop a.active { /* Add active class handling later */
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* Mobile Navigation Toggle (Hamburger) */
+.nav-toggle-mobile {
+  display: none; /* Hidden on desktop by default */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  /* Add styles for hamburger icon lines */
+}
+
+.nav-toggle-mobile span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-white);
+  margin: 5px 0;
+  transition: var(--transition-base);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) { /* Corresponds to --breakpoint-md */
+  .nav-links-desktop {
+    display: none; /* Hide desktop links on mobile */
+  }
+
+  .nav-toggle-mobile {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  /* Add styles for mobile menu overlay when active */
+  /* .mobile-menu-overlay { ... } */
+}

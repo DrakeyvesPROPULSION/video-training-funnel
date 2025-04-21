@@ -1,0 +1,16 @@
+# Bug Log for Video Training Funnel Project
+# Format: [Error Code/Message] | [Summary] | [Status: Fixed/Pending]
+# Fix Attempts (for Pending): - [Thought Process] -> [Result/Reason for Failure]
+open : The term 'open' is not recognized... | Attempted to use macOS/Linux 'open' command on Windows via attempt_completion tool. | Fixed
+- Resolution: Use the 'start' command for Windows environments when providing a command in attempt_completion.
+Error reading file: File not found: c:\Users\Drazo\Music\Roo Coding\FrontEnd SetUp\public\index.html | Attempted to read 'public/index.html' instead of 'frontend/public/index.html'. | Fixed
+- Resolution: Corrected the path to 'frontend/public/index.html' for the read_file tool.
+Attempted import error: 'useVideoPlayer' is not exported from '../../hooks/useVideoPlayer' | Incorrectly used named import for a default export in VideoPlayer.jsx. | Fixed
+- Resolution: Changed `import { useVideoPlayer }` to `import useVideoPlayer` in frontend/src/components/video/VideoPlayer.jsx.
+apply_diff failed: No sufficiently similar match found at line: 9 | Attempted to remove unused variables `selectVideo` and `nextVideo` from destructuring in TrainingVideosPage.jsx, but diff failed due to mismatch. | Fixed
+- Attempt 1: Re-read file and apply diff again. -> Success.
+apply_diff partially failed | Attempted to add `nextVideo` back to destructuring and call it in `handlePrimaryCTA` in TrainingVideosPage.jsx. Only the call was added, not the destructuring. | Fixed
+- State: `handlePrimaryCTA` calls `nextVideo()`, but `nextVideo` is not defined in the component's scope. Will cause runtime error.
+- Attempt 1: Apply diff again to add `nextVideo` to the `useVideo()` destructuring. -> Failed (diff mismatch).
+- Attempt 2: Use broader context in diff search block, including uncommented lines. -> Failed (diff mismatch).
+- Attempt 3: Use `write_to_file` to overwrite the file with the correct code. -> Success.

@@ -1,0 +1,102 @@
+/* ==========================================================================
+   TrainingVideosPage.css
+   Styles specific to the Training Videos Page
+   ========================================================================== */
+
+.training-videos-page {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  text-align: center; /* Center align content */
+}
+
+.training-videos-page h1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.training-videos-page p {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Ensure VideoPlayer component is centered if needed */
+.training-videos-page .video-player-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Video Navigation Styles */
+.video-navigation {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.video-navigation button {
+  /* Basic button styling - can be refined */
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.video-navigation button:hover {
+  background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+/* CTA Section Styles */
+.cta-section-videos {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.video-cta {
+  /* Styles for the single CTA below videos 1-3 */
+  /* Inherits from .cta-button in main-styles.css */
+  /* Add specific overrides if needed */
+}
+
+.dual-cta {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.primary-cta {
+  /* Styles for the primary "Book a Call" button */
+  /* Inherits from .cta-button */
+  background-color: var(--color-success); /* Example color */
+}
+.primary-cta:hover {
+  background-color: darken(var(--color-success), 10%);
+}
+
+.secondary-cta {
+  /* Styles for the secondary "Join Community" button */
+  /* Inherits from .cta-button */
+  background-color: var(--color-info); /* Example color */
+  color: var(--color-white);
+}
+.secondary-cta:hover {
+  background-color: darken(var(--color-info), 10%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 479px) { /* Mobile portrait */
+  .dual-cta {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--spacing-md);
+    align-items: center; /* Center stacked buttons */
+  }
+
+  .dual-cta .cta-button {
+    width: 80%; /* Make buttons wider */
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "video-training-funnel-dev",
+  "version": "1.0.0",
+  "description": "Development environment manager for the Video Training Funnel project",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm:start --prefix frontend\" \"npm:dev --prefix backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

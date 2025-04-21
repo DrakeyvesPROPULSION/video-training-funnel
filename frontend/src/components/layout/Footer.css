@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Footer.css
+   Styles for the main application footer component
+   ========================================================================== */
+
+.app-footer {
+  background-color: var(--color-light);
+  color: var(--color-secondary);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-xxl); /* Add space above footer */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-xl);
+}
+
+.footer-section h4 {
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.social-section a {
+  margin-right: var(--spacing-sm);
+  font-size: var(--font-size-lg); /* Example size */
+}
+
+.footer-bottom {
+  background-color: #e9ecef; /* Slightly darker background */
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 767px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: var(--spacing-lg);
+  }
+}

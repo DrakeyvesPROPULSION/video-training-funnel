@@ -1,0 +1,105 @@
+/* ==========================================================================
+   LandingPage.css
+   Styles specific to the Landing Page
+   ========================================================================== */
+
+.landing-page section {
+  padding: var(--spacing-xxl) 0;
+  border-bottom: 1px solid var(--color-border); /* Example separator */
+}
+
+.landing-page section:last-child {
+  border-bottom: none;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: var(--color-light); /* Example background */
+  text-align: center;
+  padding: calc(var(--spacing-xxl) * 2) 0; /* Larger padding for hero */
+}
+
+.hero-section h1 {
+  font-size: calc(var(--font-size-xxl) * 1.5); /* Larger headline */
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+}
+
+.hero-section .subheadline {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px; /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Basic CTA Button Styles (Refine later in ui/cta-button.jsx) */
+.cta-button {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-base);
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: darken(var(--color-primary), 10%);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.hero-cta {
+  /* Specific styles for hero button if needed */
+}
+
+/* Placeholder styles for other sections */
+.video-intro-section {
+  /* Styles for video section */
+  text-align: center;
+}
+
+.cta-section {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-section p {
+  margin-bottom: var(--spacing-xl);
+}
+
+.main-cta {
+  background-color: var(--color-success); /* Example different color */
+}
+
+.main-cta:hover {
+  background-color: darken(var(--color-success), 10%);
+}
+
+/* Responsive adjustments for Hero */
+@media (max-width: 767px) {
+  .hero-section h1 {
+    font-size: calc(var(--font-size-xl) * 1.5); /* Adjust size for mobile */
+  }
+
+  .hero-section .subheadline {
+    font-size: var(--font-size-base);
+  }
+
+  .cta-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+}
